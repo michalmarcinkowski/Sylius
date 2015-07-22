@@ -11,3 +11,4 @@ To get the diff between two versions, go to https://github.com/Sylius/Sylius/com
  * feature #2887 [BC BREAK][ApiBundle] Change API client public id to be simply random id
  * feature #2717 [BC BREAK] Added SyliusUserBundle together with Customer-User split
  * feature #2752 [BC BREAK] Multi channel support
+ * feature #3035 [BC BREAK] Removed `CountryTranslation` in favour of Symfony's Intl component providing translated country names
