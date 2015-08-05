@@ -27,6 +27,7 @@
         "sylius/resource-bundle":          "0.15.*@dev",
         "sylius/product":                  "0.15.*@dev",
         "sylius/archetype-bundle":         "0.15.*@dev",
+        "sylius/association-bundle":       "0.16.*@dev",
         "sylius/translation-bundle":       "0.15.*@dev"
     },
     "require-dev": {
