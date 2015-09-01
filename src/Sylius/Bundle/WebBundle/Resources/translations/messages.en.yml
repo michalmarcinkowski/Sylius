@@ -162,6 +162,8 @@ sylius:
             updated_at: Last update
     breadcrumb:
         assortment: Assortment
+        product_association_type:
+            index: Product Association Type
         block:
             imagine:
                 index: Imagine Blocks
@@ -745,6 +747,7 @@ sylius:
         variants: Variants
         price: Retail price
         attributes: Attributes
+        associations: Associations
         restricted_zone: Restricted zone
         remove_attribute: Remove attribute
         shipping_category: Shipping category
@@ -759,6 +762,7 @@ sylius:
             options: Options
             product: Product
             attributes: Attributes
+            associations: Associations
             channels: Channels
             pricing: Pricing
         tax_category: Tax category
@@ -829,6 +833,13 @@ sylius:
         type: type
         update_header: Editing attribute
         updated_at: last update
+    product_association_type:
+        create: Create product association type
+        create_header: New product association type
+        index_header: Product association types
+        name: name
+        no_results: There are no association types configured.
+        update_header: Editing association type
     archetype:
         build: Build archetype
         build_header: Building product from archetype

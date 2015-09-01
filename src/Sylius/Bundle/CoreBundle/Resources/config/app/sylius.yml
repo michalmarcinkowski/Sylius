@@ -88,10 +88,11 @@ sylius_product:
                     default: Sylius\Bundle\CoreBundle\Form\Type\ProductTranslationType
 
 sylius_association:
-    product_association:
-        classes:
-            product: Sylius\Component\Association\Model\ProductAssociation
-
+    classes:
+        product:
+            subject: Sylius\Component\Core\Model\Product
+            association:
+                model: Sylius\Component\Product\Model\ProductAssociation
 
 sylius_archetype:
     classes:
@@ -589,12 +590,12 @@ sylius_rbac:
         sylius.contact_request.update: Edit contact request
         sylius.contact_request.delete: Delete contact request
 
-        sylius.manage.association_type: Manage association types
-        sylius.association_type.show: Show association type
-        sylius.association_type.index: List association types
-        sylius.association_type.create: Create association type
-        sylius.association_type.update: Edit association type
-        sylius.association_type.delete: Delete association type
+        sylius.manage.product_association_type: Manage association types
+        sylius.product_association_type.show: Show association type
+        sylius.product_association_type.index: List association types
+        sylius.product_association_type.create: Create association type
+        sylius.product_association_type.update: Edit association type
+        sylius.product_association_type.delete: Delete association type
 
         sylius.manage.contact_topic: Manage contact topics
         sylius.contact_topic.show: Show contact topic
@@ -659,9 +660,9 @@ sylius_rbac:
         sylius.manage.contact_request: [sylius.contact_request.show, sylius.contact_request.index, sylius.contact_request.create, sylius.contact_request.update, sylius.contact_request.delete]
         sylius.manage.contact_topic: [sylius.contact_topic.show, sylius.contact_topic.index, sylius.contact_topic.create, sylius.contact_topic.update, sylius.contact_topic.delete]
         sylius.manage.settings: [sylius.settings.general, sylius.settings.security, sylius.settings.taxation]
-        sylius.manage.association_type: [sylius.association_type.show, sylius.association_type.index, sylius.association_type.create, sylius.association_type.update, sylius.association_type.delete]
+        sylius.manage.product_association_type: [sylius.product_association_type.show, sylius.product_association_type.index, sylius.product_association_type.create, sylius.product_association_type.update, sylius.product_association_type.delete]
 
-        sylius.catalog: [sylius.manage.product, sylius.manage.product_attribute, sylius.manage.product_option, sylius.manage.product_archetype, sylius.manage.product_variant, sylius.manage.taxonomy, sylius.manage.taxon, sylius.manage.association_type]
+        sylius.catalog: [sylius.manage.product, sylius.manage.product_attribute, sylius.manage.product_option, sylius.manage.product_archetype, sylius.manage.product_variant, sylius.manage.taxonomy, sylius.manage.taxon, sylius.manage.product_association_type]
         sylius.sales: [sylius.manage.order, sylius.manage.payment, sylius.manage.report]
         sylius.marketing: [sylius.manage.promotion, sylius.manage.promotion_coupon, sylius.manage.email]
         sylius.shipping: [sylius.manage.shipment, sylius.manage.shipping_method, sylius.manage.shipping_category]

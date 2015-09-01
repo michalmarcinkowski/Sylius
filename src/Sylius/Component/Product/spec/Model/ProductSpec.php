@@ -41,6 +41,11 @@ class ProductSpec extends ObjectBehavior
         $this->shouldImplement('Sylius\Component\Product\Model\ProductInterface');
     }
 
+    function it_is_associatable()
+    {
+        $this->shouldImplement('Sylius\Component\Association\Model\Associatable');
+    }
+
     function it_has_no_id_by_default()
     {
         $this->getId()->shouldReturn(null);
@@ -306,6 +311,7 @@ class ProductSpec extends ObjectBehavior
 
     function it_adds_association(AssociationInterface $association)
     {
+        $association->setOwner($this)->shouldBeCalled();
         $this->addAssociation($association);
 
         $this->getAssociations()->shouldReturn(array($association));
@@ -313,6 +319,9 @@ class ProductSpec extends ObjectBehavior
 
     function it_allows_to_remove_association(AssociationInterface $association)
     {
+        $association->setOwner($this)->shouldBeCalled();
+        $association->setOwner(null)->shouldBeCalled();
+
         $this->addAssociation($association);
         $this->removeAssociation($association);
 

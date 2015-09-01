@@ -63,7 +63,7 @@ sylius:
     info: Informacja
     success: Sukces
     warning: Ostrzeżenie
-  association_type:
+  product_association_type:
     index_header: Typy relacji
     update_header: Edycja typu relacji
     create_header: Utworzenie typu relacji
