@@ -70,6 +70,7 @@ class Product extends BaseProduct implements ProductInterface
      */
     protected $channels;
 
+
     /**
      * Constructor.
      */

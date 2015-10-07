@@ -12,6 +12,7 @@
 namespace Sylius\Component\Product\Model;
 
 use Sylius\Component\Archetype\Model\ArchetypeSubjectInterface;
+use Sylius\Component\Association\Model\Associatable;
 use Sylius\Component\Resource\Model\SlugAwareInterface;
 use Sylius\Component\Resource\Model\SoftDeletableInterface;
 use Sylius\Component\Resource\Model\TimestampableInterface;
@@ -27,7 +28,8 @@ interface ProductInterface extends
     SlugAwareInterface,
     SoftDeletableInterface,
     TimestampableInterface,
-    ProductTranslationInterface
+    ProductTranslationInterface,
+    Associatable
 {
     /**
      * Check whether the product is available.
@@ -49,4 +51,47 @@ interface ProductInterface extends
      * @param null|\DateTime $availableOn
      */
     public function setAvailableOn(\DateTime $availableOn = null);
+
+    /**
+     * Get meta keywords.
+     *
+     * @return string
+     */
+    public function getMetaKeywords();
+
+    /**
+     * Set meta keywords for the product.
+     *
+     * @param string $metaKeywords
+     */
+    public function setMetaKeywords($metaKeywords);
+
+    /**
+     * Get meta description.
+     *
+     * @return string
+     */
+    public function getMetaDescription();
+
+    /**
+     * Set meta description for the product.
+     *
+     * @param string $metaDescription
+     */
+    public function setMetaDescription($metaDescription);
+
+    /**
+     * @param AssociationInterface $association
+     */
+    public function addAssociation(AssociationInterface $association);
+
+    /**
+     * @param AssociationInterface[] $association
+     */
+    public function getAssociations();
+
+    /**
+     * @param AssociationInterface $association
+     */
+    public function removeAssociation(AssociationInterface $association);
 }

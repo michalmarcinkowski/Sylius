@@ -1,16 +1,18 @@
-sylius:
-  form:
-    product:
-      name: Name
-      description: Description
-      attributes: Attributes
-      options: Options
-      meta_keywords: Meta keywords
-      meta_description: Meta description
-    product_variant:
-      available_on: Available on
-    product_archetype:
-      name: Name
-      parent: Parent
-      attributes: Attributes
-      options: Options
+--- 
+sylius: 
+    form:
+        product: 
+            attributes: Attributes
+            description: Description
+            meta_description: "Meta description"
+            meta_keywords: "Meta keywords"
+            name: Name
+            options: Options
+        product_archetype: 
+            attributes: Attributes
+            available_on: "Available on"
+            name: Name
+            options: Options
+            parent: Parent
+        product_variant: 
+            available_on: "Available on"
